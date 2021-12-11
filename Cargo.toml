@@ -2,6 +2,7 @@
 name = "pubreveal"
 version = "0.1.0"
 edition = "2021"
+description = "A library for generating, as well as validating, a partial pre-reveal entropy chain."
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
