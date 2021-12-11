@@ -1,0 +1,1 @@
+A library for generating, as well as validating, a partial pre-reveal entropy chain.
