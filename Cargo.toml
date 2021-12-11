@@ -4,6 +4,7 @@ version = "0.1.0"
 edition = "2021"
 description = "Piapprec is a partial pre-reveal entropy chain."
 repository = "https://github.com/gdoteof/piapprec"
+license = "mit"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
