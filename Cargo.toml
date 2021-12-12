@@ -1,6 +1,6 @@
 [package]
 name = "piapprec"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 description = "Piapprec is a partial pre-reveal entropy chain."
 repository = "https://github.com/gdoteof/piapprec"
