@@ -49,15 +49,21 @@ mod tests {
     fn it_works() {
         let inner_secret = b"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
         let inner_hash = b"00000000000000000000000000000000";
-        let reveal_epochs =  gen_reveal_chain(&inner_hash, &inner_secret, 420);
+        let length = 420;
+        let reveal_epochs =  gen_reveal_chain(&inner_hash, &inner_secret, length);
         let mut epoch_iter = reveal_epochs.iter();
 
         let (mut prev_hash, _) = epoch_iter.next().unwrap();
 
+        let mut count = 1;
+
         while let Some((new_hash, new_secret)) = epoch_iter.next() {
-            assert_eq!(true, verify(&prev_hash, new_hash, new_secret));
+            assert!(verify(&prev_hash, new_hash, new_secret));
             prev_hash = *new_hash;
+            count += 1;
         }
+
+        assert_eq!(count,length)
     }
 
     #[test]
