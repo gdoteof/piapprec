@@ -1,0 +1,19 @@
+[package]
+name = "piapprec-gen"
+version = "0.0.1"
+authors = [
+    "Geoff Golder <piapprec@gd0t.com>"
+]
+edition = "2018"
+description = "Helper to generate piapprec data"
+keywords = [ "entropy", "solana"]
+
+repository = "https://github.com/gdoteof/piapprec"
+
+[dependencies.piapprec]
+path = ".."
+
+[[bin]]
+name = "piapprec"
+path = "piapprec_gen.rs"
+

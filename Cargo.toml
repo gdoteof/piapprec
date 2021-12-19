@@ -11,3 +11,5 @@ license = "MIT"
 [dependencies]
 sha2 = "0.10.0"
 arrayref = "0.3.6"
+solana-program = "=1.8.1"
+

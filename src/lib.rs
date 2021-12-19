@@ -1,5 +1,4 @@
 use sha2::{Sha256, Digest};
-
 type PubKey = [u8; 32];
 
 /*
@@ -28,6 +27,7 @@ pub fn gen_reveal_chain(initial_public : &PubKey, initial_secret : &PubKey, leng
     pairs.reverse();
     pairs
 }
+
 
 pub fn verify(prev_hash: &PubKey, new_hash: &PubKey, new_secret: &PubKey) -> bool{
         *prev_hash == Sha256::digest( 
@@ -60,6 +60,13 @@ mod tests {
         while let Some((new_hash, new_secret)) = epoch_iter.next() {
             assert!(verify(&prev_hash, new_hash, new_secret));
             prev_hash = *new_hash;
+            if count < 15{
+                println!{"new_hash: {}, secret: {}", Pubkey::new(new_hash), Pubkey::new(new_secret)}
+            }
+            if count < 3{
+                println!{"new_hash_bytes: {:x?}", new_hash}
+
+            }
             count += 1;
         }
 
