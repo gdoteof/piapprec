@@ -17,3 +17,7 @@ path = ".."
 name = "piapprec"
 path = "piapprec_gen.rs"
 
+[dependencies]
+solana-program = "=1.8.1"
+
+
